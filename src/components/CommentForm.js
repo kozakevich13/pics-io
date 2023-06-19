@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const CommentForm = ({ onAddComment }) => {
-  const [newComment, setNewComment] = useState({ name: "", body: "" });
+  const [newComment, setNewComment] = useState(() => {
+    const storedComment = localStorage.getItem("newComment");
+    return storedComment ? JSON.parse(storedComment) : { name: "", body: "" };
+  });
 
   const handleInputChange = (e) => {
-    setNewComment({ ...newComment, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setNewComment((prevComment) => ({
+      ...prevComment,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -12,6 +19,10 @@ const CommentForm = ({ onAddComment }) => {
     onAddComment(newComment);
     setNewComment({ name: "", body: "" });
   };
+
+  useEffect(() => {
+    localStorage.setItem("newComment", JSON.stringify(newComment));
+  }, [newComment]);
 
   return (
     <form onSubmit={handleSubmit} className="comment-form">
