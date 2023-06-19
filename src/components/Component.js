@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const CommentsComponent = () => {
+const Component = () => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState({ name: "", body: "" });
 
@@ -56,4 +56,4 @@ const CommentsComponent = () => {
   );
 };
 
-export default CommentsComponent;
+export default Component;
