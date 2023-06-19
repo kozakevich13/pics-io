@@ -14,6 +14,12 @@ const Comments = () => {
     setComments([...comments, newComment]);
   };
 
+  const handleDeleteComment = (index) => {
+    const updatedComments = [...comments];
+    updatedComments.splice(index, 1);
+    setComments(updatedComments);
+  };
+
   return (
     <div className="comments-container">
       <h2>Comments:</h2>
@@ -23,6 +29,7 @@ const Comments = () => {
             {comment.user?.username || comment.name}
           </p>
           <p className="comment-body">{comment.body}</p>
+          <button onClick={() => handleDeleteComment(index)}>Delete</button>
           <hr className="comment-divider" />
         </div>
       ))}
