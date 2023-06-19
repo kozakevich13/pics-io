@@ -23,7 +23,6 @@ const Comments = () => {
   return (
     <div className="comments-container">
       <CommentForm onAddComment={handleAddComment} />
-      <h2>Comments:</h2>
       {comments.map((comment, index) => (
         <div key={index} className="comment">
           <div className="user-info">

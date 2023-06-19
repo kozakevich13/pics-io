@@ -67,10 +67,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Центруємо user-logo у верхньому лівому куті */
+  transform: translate(-50%, -50%);
   font-weight: bold;
 }
 
@@ -86,6 +83,7 @@
   margin: auto;
   padding-left: 10px;
   padding-top: 7px;
+  font-size: 18px;
 }
 
 .comment-divider {
@@ -133,4 +131,40 @@
   width: 100%;
   margin-top: 45px;
   color: #8f8a6a;
+  font-size: 18px;
+}
+form {
+  width: 62%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+form input {
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border: solid 2px #602a26;
+}
+form textarea {
+  width: 100%;
+  min-height: 130px;
+  margin: 0 auto;
+  border: solid 2px #602a26;
+  font-size: 20px;
+}
+
+form button {
+  position: absolute;
+  top: 154px;
+  right: -33px;
+  background-color: #602a26;
+  width: 80px;
+  height: 40px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
 }

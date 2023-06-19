@@ -26,7 +26,6 @@ const CommentForm = ({ onAddComment }) => {
 
   return (
     <form onSubmit={handleSubmit} className="comment-form">
-      <h3>Add a Comment</h3>
       <input
         type="text"
         name="name"
@@ -39,10 +38,11 @@ const CommentForm = ({ onAddComment }) => {
         name="body"
         value={newComment.body}
         onChange={handleInputChange}
-        placeholder="Your Comment"
+        placeholder="Lorem Insum"
         required
       />
-      <button type="submit">Submit</button>
+
+      <button type="submit">Send</button>
     </form>
   );
 };
