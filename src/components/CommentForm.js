@@ -41,7 +41,6 @@ const CommentForm = ({ onAddComment }) => {
         placeholder="Lorem Insum"
         required
       />
-
       <button type="submit">Send</button>
     </form>
   );

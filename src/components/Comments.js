@@ -11,7 +11,7 @@ const Comments = () => {
   }, []);
 
   const handleAddComment = (newComment) => {
-    setComments([...comments, newComment]);
+    setComments([newComment, ...comments]);
   };
 
   const handleDeleteComment = (index) => {
