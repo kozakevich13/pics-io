@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.comments-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment-name {
+  font-weight: bold;
+}
+
+.comment-divider {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Додайте бажані стилі для решти елементів, які потрібно стилізувати */
