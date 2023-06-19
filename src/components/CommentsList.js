@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
 
-const Comments = () => {
+const CommentsList = () => {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -50,4 +50,4 @@ const Comments = () => {
   );
 };
 
-export default Comments;
+export default CommentsList;
